@@ -1,0 +1,88 @@
+{% include 'header.html' %}
+{% load static %}
+<!-- book section -->
+<section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form enctype="multipart/form-data" method="POST">
+              {% csrf_token %}
+              <div>
+                <input type="text" name="nam" class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="text" name="mob" class="form-control" placeholder="Mobile Number" onkeypress="return event.charCode >= 45 &amp;&amp; event.charCode <= 57 &amp;&amp; event.charCode!=47" required="" minlength="10" maxlength="10"/>
+              </div>
+              <div>
+                <input type="text" name="per" class="form-control" placeholder="Enter Number of persons" onkeypress="return event.charCode >= 45 &amp;&amp; event.charCode <= 57 &amp;&amp; event.charCode!=47" required="" minlength="2" maxlength="2" />
+              </div>
+              <div>
+                <input type="date" name="dat" class="form-control">
+              </div>
+              <div>
+                <input type="time" class="form-control" name="tim" >
+              </div>
+              <div class="btn_box">
+                <button>
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            <div class="agile-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.1083387863105!2d77.51322521475484!3d23.093129584917435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c479f723bbf0f%3A0xe97f740b233969a6!2sEWS!5e0!3m2!1sen!2sin!4v1639987372303!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          What Says Our Customers
+        </h2>
+      </div>
+      <div class="carousel-wrap row ">
+        <div class="owl-carousel client_owl-carousel">
+          {% for i in tes %}
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p style="text-align: justify;">
+                  {{ i.detail }}
+                </p>
+                <h6>
+                  {{ i.name }}
+                </h6>
+                <p >
+                  {{ i.post }}
+                </p>
+              </div>
+              <div class="img-box">
+                <img src="{{ i.image.url }}" alt="" class="box-img">
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+{% include 'footer.html' %}

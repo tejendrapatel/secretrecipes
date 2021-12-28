@@ -1,0 +1,496 @@
+
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+      {% load static %}
+      <!-- Basic -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <!-- Site Metas -->
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <link rel="shortcut icon" href="{% static 'images/fa.png' %}" type="">
+    
+      <title>Secret-recipe</title>
+    
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    
+      <!--owl slider stylesheet -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <!-- nice select  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+      <!-- font awesome style -->
+      <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    
+      <!-- Custom styles for this template -->
+      <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+      <!-- responsive style -->
+      <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <!-- Chatra {literal} -->
+    <script>
+      (function(d, w, c) {
+          w.ChatraID = 'r6r5eszwACnvDoRvu';
+          var s = d.createElement('script');
+          w[c] = w[c] || function() {
+              (w[c].q = w[c].q || []).push(arguments);
+          };
+          s.async = true;
+          s.src = 'https://call.chatra.io/chatra.js';
+          if (d.head) d.head.appendChild(s);
+      })(document, window, 'Chatra');
+    </script>
+    <!-- /Chatra {/literal} -->
+    </head>
+    
+    <body>
+    
+      <div class="hero_area">
+        <div class="bg-box">
+          <img src="{% static 'images/hero-bg.jpg' %}" alt="">
+        </div>
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+              <a class="navbar-brand" href="index.html">
+                <span>
+                  Secret Recipe
+                </span>
+              </a>
+    
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mx-auto ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'book_table' %}">Book Table</a>
+                  </li>
+                </ul>
+                <div class="user_option">
+                  <a href="{% url 'Login' %}" class="user_link">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </a>
+                  
+                  <form class="form-inline">
+                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    
+                  </form>
+                  <a class="cart_link" href="#">
+                  </a>
+                  <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank" class="order_online">
+                    
+                    Order Online
+                  </a>
+    
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Discover a brand-new, street-level food with a twist.
+                    </h1>
+                    <p>
+                      Secret recipe Food Corner Indian cuisine to a new culinary level, while still holding true to its traditional nuances.
+                    </p>
+                    <div class="btn-box">
+                      <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank"class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Food that handcrafted with ingredients from the city's local markets.
+                    </h1>
+                    <p>
+                      Order the safe food that is prepared at home.
+                    </p>
+                    <div class="btn-box">
+                      <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank"class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Celebrate your Birthday with us
+                    </h1>
+                    <p>
+                      Order the best cake at the lowest prices ever.
+                    </p>
+                    <div class="btn-box">
+                      <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank"class="btn1">
+                        Order Now 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- offer section -->
+
+  <section class="offer_section layout_padding-bottom">
+    <div class="offer_container">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-6  ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/o1.jpg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Tasty Thursdays
+                </h5>
+                <h6>
+                  <span>20%</span> Off
+                </h6>
+                <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                  Order Now <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6  ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/o2.jpg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Pizza Days
+                </h5>
+                <h6>
+                  <span>15%</span> Off
+                </h6>
+                <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                Order Now <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end offer section -->
+
+  <!-- food section -->
+
+  <section class="food_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Menu
+        </h2>
+      </div>
+
+      <ul class="filters_menu">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".cakes">Cakes</li>
+        <li data-filter=".chinese">Chinese</li>
+        <li data-filter=".indian">Indian</li>
+        <li data-filter=".italian">Italian</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+        {% for i in cake %}
+          <div class="col-sm-6 col-lg-4 all cakes">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% for i in chinese %}
+          <div class="col-sm-6 col-lg-4 all chinese">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% for i in indian %}
+          <div class="col-sm-6 col-lg-4 all indian">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% for i in  italian %}
+          <div class="col-sm-6 col-lg-4 all italian">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                     Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="{% url 'menu' %}">
+          View More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end food section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/ss.png' %}" style="width: 1000px;" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are Here for you
+              </h2>
+            </div>
+            <p style="text-align: justify;">
+              Secret recipe captures and combines the spirit of the nation and the impeccable taste of the Moghuls. Whether its Non-Vegetarian food, Continental or Chinese, we have it all for you. We are conveniently situated on core business street of Bhopal, the capital of Madhya Pradesh. Apart from being placed in the heart of the city, we are only at 10 min distance from main Mandideep . The restaurant offers the best food in Central India. Serving not only for dining, but it includes breakfast and lunch each day, while featuring upscale dining for dinner each evening. Choose from a selection of unique dishes blending local influences, organic products and grilled favorites with a creative twist.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- book section -->
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form enctype="multipart/form-data" method="POST">
+              {% csrf_token %}
+              <div>
+                <input type="text" name="nam" class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="text" name="mob" class="form-control" placeholder="Mobile Number" onkeypress="return event.charCode >= 45 &amp;&amp; event.charCode <= 57 &amp;&amp; event.charCode!=47" required="" minlength="10" maxlength="10"/>
+              </div>
+              <div>
+                <input type="text" name="per" class="form-control" placeholder="Enter Number of persons" onkeypress="return event.charCode >= 45 &amp;&amp; event.charCode <= 57 &amp;&amp; event.charCode!=47" required="" minlength="2" maxlength="2" />
+              </div>
+              <div>
+                <input type="date" name="dat" class="form-control">
+              </div>
+              <div>
+                <input type="time" class="form-control" name="tim" >
+              </div>
+              <div class="btn_box">
+                <button>
+                  Book Now
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            <div class="agile-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.1083387863105!2d77.51322521475484!3d23.093129584917435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c479f723bbf0f%3A0xe97f740b233969a6!2sEWS!5e0!3m2!1sen!2sin!4v1639987372303!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          What Says Our Customers
+        </h2>
+      </div>
+      <div class="carousel-wrap row ">
+        <div class="owl-carousel client_owl-carousel">
+          {% for i in tes %}
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p style="text-align: justify;">
+                  {{ i.detail }}
+                </p>
+                <h6>
+                  {{ i.name }}
+                </h6>
+                <p >
+                  {{ i.post }}
+                </p>
+              </div>
+              <div class="img-box">
+                <img src="{{ i.image.url }}" alt="" class="box-img">
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+{% include 'footer.html' %}

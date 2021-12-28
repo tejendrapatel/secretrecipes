@@ -1,0 +1,141 @@
+{% include 'header.html' %}
+{% load static %}
+<!-- food section -->
+
+<section class="food_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Menu
+        </h2>
+      </div>
+
+      <ul class="filters_menu">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".cakes">Cakes</li>
+        <li data-filter=".chinese">Chinese</li>
+        <li data-filter=".indian">Indian</li>
+        <li data-filter=".italian">Italian</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+        {% for i in cake %}
+          <div class="col-sm-6 col-lg-4 all cakes">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% for i in chinese %}
+          <div class="col-sm-6 col-lg-4 all chinese">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% for i in indian %}
+          <div class="col-sm-6 col-lg-4 all indian">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                      Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% for i in  italian %}
+          <div class="col-sm-6 col-lg-4 all italian">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{{ i.image.url }}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name }}
+                  </h5>
+                  <p style="text-align: justify;">
+                    {{ i.detail }}
+                  </p>
+                  <div class="options">
+                    <h6>
+                     Rs {{ i.price }}
+                    </h6>
+                    <a href="https://api.whatsapp.com/send?phone=+917974566773" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="btn-box">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- end food section -->
+{% include 'footer.html' %}
